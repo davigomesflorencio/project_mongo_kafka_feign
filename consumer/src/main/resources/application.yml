@@ -1,0 +1,23 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: cliente_db
+      username: root
+      password: root
+      authentication-database: admin
+
+topic:
+  endereco-client: topic_endereco_cliente
+
+server:
+  port: 8081
